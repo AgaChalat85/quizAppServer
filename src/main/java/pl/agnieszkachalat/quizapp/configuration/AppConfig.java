@@ -15,7 +15,7 @@ public class AppConfig {
     @Autowired private PropertiesProvider propertiesProvider;
     
     @Bean
-    public HttpClient quizClient() {
+    public HttpClient httpClient() {
         return HttpClient.newBuilder().version(HttpClient.Version.HTTP_2).connectTimeout(Duration.ofSeconds(5)).build();
     }
     
