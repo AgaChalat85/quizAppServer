@@ -23,7 +23,8 @@ public class QuizApiClient {
         
         try {
             HttpResponse<String> response = httpClient.send(randomQuestionRequest, HttpResponse.BodyHandlers.ofString());
-            return new ObjectMapper().readValue(response.body(), new TypeReference<List<QuestionResponseDto>>() {});
+            String jsonBody = response.body();
+            return new ObjectMapper().readValue(jsonBody, new TypeReference<List<QuestionResponseDto>>() {});
         } catch (IOException | InterruptedException ex) {
             Logger.getLogger(QuizApiClient.class.getName()).log(Level.SEVERE, null, ex);
         }

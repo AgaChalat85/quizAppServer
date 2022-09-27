@@ -28,6 +28,7 @@ public class AppConfig {
                           .header("Content-type", "application/json")
                           .GET()
                           .build();
+        // TODO -> extend url with limit parameter and value 1
     }
     
 }
