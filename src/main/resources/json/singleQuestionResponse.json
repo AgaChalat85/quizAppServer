@@ -20,6 +20,7 @@
       "answer_e_correct": "false",
       "answer_f_correct": "false"
     },
+    "correct_answer" : null,
     "explanation": "rmdir deletes an empty directory",
     "tip": null,
     "tags": [{ "name" : "linux"}],

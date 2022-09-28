@@ -13,6 +13,7 @@ public class QuestionResponseDto {
     private AnswersResponsDto answers;
     private boolean multiple_correct_answers;
     private CorrectAnswersResponseDto correct_answers;
+    private String correct_answer;
     private String explanation;
     private String tip;
     private List<TagResponseDto> tags;
@@ -41,6 +42,10 @@ public class QuestionResponseDto {
 
     public CorrectAnswersResponseDto getCorrect_answers() {
         return correct_answers;
+    }
+    
+    public String getCorrect_answer() {
+        return correct_answer;
     }
 
     public String getExplanation() {
@@ -88,6 +93,7 @@ public class QuestionResponseDto {
                                         .append("answers", answers)
                                         .append("multiple_correct_answers", multiple_correct_answers)
                                         .append("correct_answers", correct_answers)
+                                        .append("correct_answer", correct_answer)
                                         .append("explanation", explanation)
                                         .append("tip", tip)
                                         .append("tags", tags)

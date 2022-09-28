@@ -34,5 +34,13 @@ public class QuizApiClientTest extends BaseTest {
         
         assertNotNull(result);
         assertEquals(1, result.size());
+        
+        QuestionResponseDto question = result.get(0);
+        assertEquals(1, question.getId());
+        assertFalse(question.isMultiple_correct_answers());
+        assertNull(question.getCorrect_answer());
+        assertEquals(1, question.getTags().size());
+        assertEquals("linux", question.getCategory());
+        assertEquals("Easy", question.getDifficulty());
     }
 }
