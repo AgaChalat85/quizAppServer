@@ -22,7 +22,7 @@
     },
     "explanation": "rmdir deletes an empty directory",
     "tip": null,
-    "tags": [],
+    "tags": [{ "name" : "linux"}],
     "category": "linux",
     "difficulty": "Easy"
   }

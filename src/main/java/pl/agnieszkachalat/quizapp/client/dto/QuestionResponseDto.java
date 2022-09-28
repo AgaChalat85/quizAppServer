@@ -15,7 +15,7 @@ public class QuestionResponseDto {
     private CorrectAnswersResponseDto correct_answers;
     private String explanation;
     private String tip;
-    private List<String> tags;
+    private List<TagResponseDto> tags;
     private String category;
     private String difficulty;
 
@@ -51,7 +51,7 @@ public class QuestionResponseDto {
         return tip;
     }
 
-    public List<String> getTags() {
+    public List<TagResponseDto> getTags() {
         return tags;
     }
 
