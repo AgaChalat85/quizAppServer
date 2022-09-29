@@ -1,6 +1,7 @@
 package pl.agnieszkachalat.quizapp.client;
 
 import static pl.agnieszkachalat.quizapp.enums.HttpStatusEnum.*;
+import static pl.agnieszkachalat.quizapp.client.exception.ExceptionMessages.*;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -31,7 +32,7 @@ public class QuizApiClient {
         
         if(response.statusCode() != 200) {
             HttpStatusEnum httpStatus = findStatusByCode(response.statusCode());
-            String message = String.format("Quiz Api request for single random question failed: Status %d (%s)", httpStatus.getStatusCode(), httpStatus.getDescription());
+            String message = String.format(GET_RANDOM_QUESTION_REQUEST_FAILED, httpStatus.getStatusCode(), httpStatus.getDescription());
             throw new QuizApiException(message);
         }
         
@@ -40,7 +41,7 @@ public class QuizApiClient {
         List<QuestionResponseDto> questions = new ObjectMapper().readValue(response.body(), new TypeReference<List<QuestionResponseDto>>() {});
         
         if(CollectionUtils.isEmpty(questions)) {
-            throw new QuizApiException("There are no any questions.");
+            throw new QuizApiException(THERE_ARE_ANY_QUESTIONS);
         }
         
         return questions;

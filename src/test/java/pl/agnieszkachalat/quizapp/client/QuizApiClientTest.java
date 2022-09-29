@@ -1,10 +1,13 @@
 package pl.agnieszkachalat.quizapp.client;
 
+import static org.junit.jupiter.api.Assertions.*;
+import static pl.agnieszkachalat.quizapp.enums.HttpStatusEnum.*;
+import static pl.agnieszkachalat.quizapp.client.exception.ExceptionMessages.*;
+
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.util.List;
-import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
@@ -12,6 +15,7 @@ import org.mockito.Mock;
 import org.mockito.Mockito;
 import pl.agnieszkachalat.quizapp.BaseTest;
 import pl.agnieszkachalat.quizapp.client.dto.QuestionResponseDto;
+import pl.agnieszkachalat.quizapp.client.exception.QuizApiException;
 
 public class QuizApiClientTest extends BaseTest {
     
@@ -43,5 +47,34 @@ public class QuizApiClientTest extends BaseTest {
         assertEquals(1, question.getTags().size());
         assertEquals("linux", question.getCategory());
         assertEquals("Easy", question.getDifficulty());
+    }
+    
+    @Test
+    public void thatGetRandomQuestionFailedWithWrongStatus() throws Exception{
+        Mockito.when(httpClient.send(randomQuestionRequest, HttpResponse.BodyHandlers.ofString())).thenReturn(response);
+        Mockito.when(response.statusCode()).thenReturn(404);
+        
+        QuizApiException exception = assertThrows(QuizApiException.class, () -> 
+                quizApiClient.getRandomQuestion()
+        );
+        
+        String expectedExceptionMessage = String.format(GET_RANDOM_QUESTION_REQUEST_FAILED, NOT_FOUND.getStatusCode(), NOT_FOUND.getDescription());
+        
+        assertEquals(expectedExceptionMessage, exception.getMessage());
+    }
+    
+    @Test
+    public void thatGetRandomQuestionGivesAnyResult() throws Exception {
+        String jsonResponseString = "[]";
+        
+        Mockito.when(httpClient.send(randomQuestionRequest, HttpResponse.BodyHandlers.ofString())).thenReturn(response);
+        Mockito.when(response.statusCode()).thenReturn(200);
+        Mockito.when(response.body()).thenReturn(jsonResponseString);
+        
+        QuizApiException exception = assertThrows(QuizApiException.class, () -> 
+                quizApiClient.getRandomQuestion()
+        );
+        
+        assertEquals(THERE_ARE_ANY_QUESTIONS, exception.getMessage());
     }
 }
