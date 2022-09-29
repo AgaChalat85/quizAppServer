@@ -28,6 +28,7 @@ public class QuizApiClientTest extends BaseTest {
         assertNotNull(jsonResponseString);
         
         Mockito.when(httpClient.send(randomQuestionRequest, HttpResponse.BodyHandlers.ofString())).thenReturn(response);
+        Mockito.when(response.statusCode()).thenReturn(200);
         Mockito.when(response.body()).thenReturn(jsonResponseString);
         
         List<QuestionResponseDto> result = quizApiClient.getRandomQuestion();
