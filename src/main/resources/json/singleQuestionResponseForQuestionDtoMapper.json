@@ -1,0 +1,28 @@
+{
+    "id": 1,
+    "question": "This is a test quetion",
+    "description": "This is a test description",
+    "answers": {
+      "answer_a": "Answer A",
+      "answer_b": "Answer B",
+      "answer_c": "Answer C",
+      "answer_d": "Answer D",
+      "answer_e": "Answer E",
+      "answer_f": null
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "false",
+      "answer_b_correct": "false",
+      "answer_c_correct": "true",
+      "answer_d_correct": "false",
+      "answer_e_correct": "false",
+      "answer_f_correct": "false"
+    },
+    "correct_answer" : null,
+    "explanation": "This is a test explanation",
+    "tip": "Test Tip",
+    "tags": [{ "name" : "linux"}, { "name" : "PHP"}],
+    "category": "linux",
+    "difficulty": "Easy"
+  }

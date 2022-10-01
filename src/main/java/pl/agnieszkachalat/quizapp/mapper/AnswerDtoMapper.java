@@ -21,27 +21,27 @@ public interface AnswerDtoMapper {
         AnswersResponsDto quizApiAnswers = responseDto.getAnswers();
         CorrectAnswersResponseDto quizApiCorrectAnswers = responseDto.getCorrect_answers();
         
-        if(StringUtils.isEmpty(quizApiAnswers.getAnswer_a())) {
+        if(!StringUtils.isEmpty(quizApiAnswers.getAnswer_a())) {
             answerDtoList.add(new AnswerDto(quizApiAnswers.getAnswer_a(), quizApiCorrectAnswers.isAnswer_a_correct()));
         }
         
-        if(StringUtils.isEmpty(quizApiAnswers.getAnswer_b())) {
+        if(!StringUtils.isEmpty(quizApiAnswers.getAnswer_b())) {
             answerDtoList.add(new AnswerDto(quizApiAnswers.getAnswer_b(), quizApiCorrectAnswers.isAnswer_b_correct()));
         }
         
-        if(StringUtils.isEmpty(quizApiAnswers.getAnswer_c())) {
+        if(!StringUtils.isEmpty(quizApiAnswers.getAnswer_c())) {
             answerDtoList.add(new AnswerDto(quizApiAnswers.getAnswer_c(), quizApiCorrectAnswers.isAnswer_c_correct()));
         }
         
-        if(StringUtils.isEmpty(quizApiAnswers.getAnswer_d())) {
+        if(!StringUtils.isEmpty(quizApiAnswers.getAnswer_d())) {
             answerDtoList.add(new AnswerDto(quizApiAnswers.getAnswer_d(), quizApiCorrectAnswers.isAnswer_d_correct()));
         }
         
-        if(StringUtils.isEmpty(quizApiAnswers.getAnswer_e())) {
+        if(!StringUtils.isEmpty(quizApiAnswers.getAnswer_e())) {
             answerDtoList.add(new AnswerDto(quizApiAnswers.getAnswer_e(), quizApiCorrectAnswers.isAnswer_e_correct()));
         }
         
-        if(StringUtils.isEmpty(quizApiAnswers.getAnswer_f())) {
+        if(!StringUtils.isEmpty(quizApiAnswers.getAnswer_f())) {
             answerDtoList.add(new AnswerDto(quizApiAnswers.getAnswer_f(), quizApiCorrectAnswers.isAnswer_f_correct()));
         }
         
