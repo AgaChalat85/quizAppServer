@@ -8,6 +8,11 @@ public class AnswerDto extends BaseDto {
     
     private String answer;
     private boolean correct;
+    
+    public AnswerDto(String answer, boolean correct) {
+        this.answer = answer;
+        this.correct = correct;
+    }
 
     public String getAnswer() {
         return answer;
