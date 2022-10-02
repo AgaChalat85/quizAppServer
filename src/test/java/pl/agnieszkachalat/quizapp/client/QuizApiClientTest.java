@@ -1,5 +1,6 @@
 package pl.agnieszkachalat.quizapp.client;
 
+import java.io.IOException;
 import static org.junit.jupiter.api.Assertions.*;
 import static pl.agnieszkachalat.quizapp.enums.HttpStatusEnum.*;
 import static pl.agnieszkachalat.quizapp.client.exception.ExceptionMessages.*;
@@ -77,5 +78,27 @@ public class QuizApiClientTest extends BaseTest {
         );
         
         assertEquals(QUIZ_API_QUESTION_NOT_FOUND, exception.getMessage());
+    }
+    
+    @Test
+    public void thatGetRandomQuestionRequestThrowsIOException() throws Exception {
+        Mockito.when(httpClient.send(randomQuestionRequest, HttpResponse.BodyHandlers.ofString())).thenThrow(IOException.class);
+        
+        QuizApiRequestFailedException exception = assertThrows(QuizApiRequestFailedException.class, () -> 
+                quizApiClient.getRandomQuestion()
+        );
+        
+        assertEquals(GET_RANDOM_QUESTION_REQUEST_FAILED, exception.getMessage());
+    }
+    
+    @Test
+    public void thatGetRandomQuestionRequestThrowsInterruptedException() throws Exception {
+        Mockito.when(httpClient.send(randomQuestionRequest, HttpResponse.BodyHandlers.ofString())).thenThrow(InterruptedException.class);
+        
+        QuizApiRequestFailedException exception = assertThrows(QuizApiRequestFailedException.class, () -> 
+                quizApiClient.getRandomQuestion()
+        );
+        
+        assertEquals(GET_RANDOM_QUESTION_REQUEST_FAILED, exception.getMessage());
     }
 }

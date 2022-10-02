@@ -158,3 +158,57 @@
 2022-10-02 21:08:11.942  INFO 17256 --- [SpringApplicationShutdownHook] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
 2022-10-02 21:08:11.944  INFO 17256 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2022-10-02 21:08:11.947  INFO 17256 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-10-02 21:12:07.368  INFO 13740 --- [main] p.a.quizapp.client.QuizApiClientTest     : Starting QuizApiClientTest using Java 11.0.16.1 on LAPTOP-NSH6U059 with PID 13740 (started by 48530 in C:\Users\48530\OneDrive\Dokumenty\NetBeansProjects\quizAppServer)
+2022-10-02 21:12:07.369  INFO 13740 --- [main] p.a.quizapp.client.QuizApiClientTest     : No active profile set, falling back to 1 default profile: "default"
+2022-10-02 21:12:07.829  INFO 13740 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-10-02 21:12:07.848  INFO 13740 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 12 ms. Found 0 JPA repository interfaces.
+2022-10-02 21:12:08.355  INFO 13740 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-10-02 21:12:08.547  INFO 13740 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-10-02 21:12:08.607  INFO 13740 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-10-02 21:12:08.661  INFO 13740 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.11.Final
+2022-10-02 21:12:08.815  INFO 13740 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-10-02 21:12:08.944  INFO 13740 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-10-02 21:12:09.139  INFO 13740 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-10-02 21:12:09.147  INFO 13740 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-10-02 21:12:09.541  WARN 13740 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-10-02 21:12:10.218  INFO 13740 --- [main] p.a.quizapp.client.QuizApiClientTest     : Started QuizApiClientTest in 3.118 seconds (JVM running for 3.936)
+2022-10-02 21:12:10.617  INFO 13740 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-10-02 21:12:10.618  INFO 13740 --- [SpringApplicationShutdownHook] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2022-10-02 21:12:10.620  INFO 13740 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-10-02 21:12:10.623  INFO 13740 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-10-02 21:12:35.786  INFO 20468 --- [main] p.a.quizapp.client.QuizApiClientTest     : Starting QuizApiClientTest using Java 11.0.16.1 on LAPTOP-NSH6U059 with PID 20468 (started by 48530 in C:\Users\48530\OneDrive\Dokumenty\NetBeansProjects\quizAppServer)
+2022-10-02 21:12:35.787  INFO 20468 --- [main] p.a.quizapp.client.QuizApiClientTest     : No active profile set, falling back to 1 default profile: "default"
+2022-10-02 21:12:36.275  INFO 20468 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-10-02 21:12:36.293  INFO 20468 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 11 ms. Found 0 JPA repository interfaces.
+2022-10-02 21:12:36.778  INFO 20468 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-10-02 21:12:36.958  INFO 20468 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-10-02 21:12:37.018  INFO 20468 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-10-02 21:12:37.058  INFO 20468 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.11.Final
+2022-10-02 21:12:37.225  INFO 20468 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-10-02 21:12:37.341  INFO 20468 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-10-02 21:12:37.527  INFO 20468 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-10-02 21:12:37.535  INFO 20468 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-10-02 21:12:37.899  WARN 20468 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-10-02 21:12:38.547  INFO 20468 --- [main] p.a.quizapp.client.QuizApiClientTest     : Started QuizApiClientTest in 3.031 seconds (JVM running for 3.847)
+2022-10-02 21:12:38.899  INFO 20468 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-10-02 21:12:38.900  INFO 20468 --- [SpringApplicationShutdownHook] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2022-10-02 21:12:38.902  INFO 20468 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-10-02 21:12:38.905  INFO 20468 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-10-02 21:13:39.026  INFO 26244 --- [main] p.a.quizapp.client.QuizApiClientTest     : Starting QuizApiClientTest using Java 11.0.16.1 on LAPTOP-NSH6U059 with PID 26244 (started by 48530 in C:\Users\48530\OneDrive\Dokumenty\NetBeansProjects\quizAppServer)
+2022-10-02 21:13:39.031  INFO 26244 --- [main] p.a.quizapp.client.QuizApiClientTest     : No active profile set, falling back to 1 default profile: "default"
+2022-10-02 21:13:39.503  INFO 26244 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-10-02 21:13:39.521  INFO 26244 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 12 ms. Found 0 JPA repository interfaces.
+2022-10-02 21:13:40.027  INFO 26244 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-10-02 21:13:40.212  INFO 26244 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-10-02 21:13:40.275  INFO 26244 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-10-02 21:13:40.325  INFO 26244 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.11.Final
+2022-10-02 21:13:40.484  INFO 26244 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-10-02 21:13:40.611  INFO 26244 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-10-02 21:13:40.786  INFO 26244 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-10-02 21:13:40.793  INFO 26244 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-10-02 21:13:41.143  WARN 26244 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-10-02 21:13:41.760  INFO 26244 --- [main] p.a.quizapp.client.QuizApiClientTest     : Started QuizApiClientTest in 2.998 seconds (JVM running for 3.816)
+2022-10-02 21:13:42.116  INFO 26244 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-10-02 21:13:42.117  INFO 26244 --- [SpringApplicationShutdownHook] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2022-10-02 21:13:42.119  INFO 26244 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-10-02 21:13:42.121  INFO 26244 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
