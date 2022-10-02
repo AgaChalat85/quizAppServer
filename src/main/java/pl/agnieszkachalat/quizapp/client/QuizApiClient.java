@@ -10,7 +10,8 @@ import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.util.List;
-import java.util.logging.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.util.CollectionUtils;
@@ -21,7 +22,7 @@ import pl.agnieszkachalat.quizapp.enums.HttpStatusEnum;
 @Component
 public class QuizApiClient {
     
-    private final static Logger LOGGER = Logger.getLogger(QuizApiClient.class.getName());
+    private final static Logger LOGGER = LoggerFactory.getLogger(QuizApiClient.class.getName());
     
     @Autowired private HttpClient httpClient;
     @Autowired private HttpRequest randomQuestionRequest;

@@ -2,8 +2,8 @@ package pl.agnieszkachalat.quizapp.service;
 
 import java.io.IOException;
 import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -17,7 +17,7 @@ import pl.agnieszkachalat.quizapp.mapper.QuestionDtoMapper;
 @Transactional
 public class QuestionService {
     
-    private static final Logger LOGGER = Logger.getLogger(QuestionService.class.getName());
+    private static final Logger LOGGER = LoggerFactory.getLogger(QuestionService.class.getName());
     
     @Autowired private QuizApiClient quizApiClient;
     @Autowired private QuestionDtoMapper questionDtoMapper;
@@ -28,7 +28,7 @@ public class QuestionService {
             List<QuestionResponseDto> result = quizApiClient.getRandomQuestion();
             return questionDtoMapper.mapToQuestionDto(result.get(0));
         } catch(QuizApiException | InterruptedException | IOException ex) {
-            LOGGER.log(Level.SEVERE, ex.getMessage(), ex);
+            LOGGER.error(ex.getMessage(), ex);
             return null;
         }
     } 
