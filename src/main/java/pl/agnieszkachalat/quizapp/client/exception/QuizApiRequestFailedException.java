@@ -1,6 +1,6 @@
 package pl.agnieszkachalat.quizapp.client.exception;
 
-public class QuizApiRequestFailedException extends Exception {
+public class QuizApiRequestFailedException extends RuntimeException {
     
     public QuizApiRequestFailedException(String message) {
         super(message);

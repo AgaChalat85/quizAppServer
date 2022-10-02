@@ -22,7 +22,7 @@ public class QuestionDtoMapperTest extends BaseTest {
     
     @Test
     public void thatMappingToQuestionDtoWorks() throws Exception {
-        String jsonResponseString = getFileAsString("json/singleQuestionResponseForQuestionDtoMapper.json");
+        String jsonResponseString = getFileAsString("json/QuestionDtoMapperTest_thatMappingToQuestionDtoWorks.json");
         
         QuestionResponseDto quizApiQuestion = new ObjectMapper().readValue(jsonResponseString, new TypeReference<QuestionResponseDto>() {});
         

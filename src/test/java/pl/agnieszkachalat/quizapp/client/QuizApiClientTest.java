@@ -29,7 +29,7 @@ public class QuizApiClientTest extends BaseTest {
     
     @Test
     public void thatGetRandomQuestionWorks() throws Exception {
-        String jsonResponseString = getFileAsString("json/singleQuestionResponse.json");
+        String jsonResponseString = getFileAsString("json/QuizApiClientTest_thatGetRandomQuestionWorks.json");
         
         assertNotNull(jsonResponseString);
         
