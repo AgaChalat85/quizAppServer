@@ -1,15 +1,14 @@
 package pl.agnieszkachalat.quizapp.client;
 
+import java.io.IOException;
 import static pl.agnieszkachalat.quizapp.enums.HttpStatusEnum.*;
 import static pl.agnieszkachalat.quizapp.client.exception.ExceptionMessages.*;
 
-import com.fasterxml.jackson.core.type.TypeReference;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import java.io.IOException;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.util.List;
+import java.util.logging.Level;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,6 +18,7 @@ import pl.agnieszkachalat.quizapp.client.dto.QuestionResponseDto;
 import pl.agnieszkachalat.quizapp.client.exception.QuizApiQuestionNotFoundExcption;
 import pl.agnieszkachalat.quizapp.client.exception.QuizApiRequestFailedException;
 import pl.agnieszkachalat.quizapp.enums.HttpStatusEnum;
+import pl.agnieszkachalat.quizapp.util.JSONUtils;
 
 @Component
 public class QuizApiClient {
@@ -28,25 +28,29 @@ public class QuizApiClient {
     @Autowired private HttpClient httpClient;
     @Autowired private HttpRequest randomQuestionRequest;
     
-    public List<QuestionResponseDto> getRandomQuestion() throws IOException, InterruptedException, QuizApiQuestionNotFoundExcption, QuizApiRequestFailedException {
+    public List<QuestionResponseDto> getRandomQuestion() throws QuizApiQuestionNotFoundExcption, QuizApiRequestFailedException {
         
-        HttpResponse<String> response = httpClient.send(randomQuestionRequest, HttpResponse.BodyHandlers.ofString());
-        
-        if(response.statusCode() != 200) {
-            HttpStatusEnum httpStatus = findStatusByCode(response.statusCode());
-            String message = String.format(GET_RANDOM_QUESTION_REQUEST_FAILED, httpStatus.getStatusCode(), httpStatus.getDescription());
-            throw new QuizApiRequestFailedException(message);
+        try {
+            HttpResponse<String> response = httpClient.send(randomQuestionRequest, HttpResponse.BodyHandlers.ofString());
+            
+            if(response.statusCode() != 200) {
+                HttpStatusEnum httpStatus = findStatusByCode(response.statusCode());
+                String message = String.format(GET_RANDOM_QUESTION_REQUEST_FAILED_WITH_STATUS_RESPONSE, httpStatus.getStatusCode(), httpStatus.getDescription());
+                throw new QuizApiRequestFailedException(message);
+            }
+            
+            LOGGER.info("Quiz Api request for single random question was executed successfully.");
+            
+            List<QuestionResponseDto> questions = JSONUtils.convertJSONStringToQuestionResponseDtoList(response.body());
+            
+            if(CollectionUtils.isEmpty(questions)) {
+                throw new QuizApiQuestionNotFoundExcption(QUIZ_API_QUESTION_NOT_FOUND);
+            }
+            
+            return questions;
+        } catch (IOException | InterruptedException ex) {
+            throw new QuizApiRequestFailedException(GET_RANDOM_QUESTION_REQUEST_FAILED, ex);
         }
-        
-        LOGGER.info("Quiz Api request for single random question was executed successfully.");
-        
-        List<QuestionResponseDto> questions = new ObjectMapper().readValue(response.body(), new TypeReference<List<QuestionResponseDto>>() {});
-        
-        if(CollectionUtils.isEmpty(questions)) {
-            throw new QuizApiQuestionNotFoundExcption(QUIZ_API_QUESTION_NOT_FOUND);
-        }
-        
-        return questions;
     }
     
 }

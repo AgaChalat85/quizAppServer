@@ -6,4 +6,8 @@ public class QuizApiRequestFailedException extends Exception {
         super(message);
     }
     
+    public QuizApiRequestFailedException(String message, Throwable ex) {
+        super(message, ex);
+    }
+    
 }

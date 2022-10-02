@@ -59,7 +59,7 @@ public class QuizApiClientTest extends BaseTest {
                 quizApiClient.getRandomQuestion()
         );
         
-        String expectedExceptionMessage = String.format(GET_RANDOM_QUESTION_REQUEST_FAILED, NOT_FOUND.getStatusCode(), NOT_FOUND.getDescription());
+        String expectedExceptionMessage = String.format(GET_RANDOM_QUESTION_REQUEST_FAILED_WITH_STATUS_RESPONSE, NOT_FOUND.getStatusCode(), NOT_FOUND.getDescription());
         
         assertEquals(expectedExceptionMessage, exception.getMessage());
     }

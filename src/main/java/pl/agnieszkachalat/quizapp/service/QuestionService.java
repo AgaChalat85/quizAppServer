@@ -1,8 +1,6 @@
 package pl.agnieszkachalat.quizapp.service;
 
-import java.io.IOException;
 import java.util.List;
-import java.util.logging.Level;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,17 +22,8 @@ public class QuestionService {
     @Autowired private QuizApiClient quizApiClient;
     @Autowired private QuestionDtoMapper questionDtoMapper;
     
-    public QuestionDto getRandomQuestion() {
-        
-        try {
-            List<QuestionResponseDto> result = quizApiClient.getRandomQuestion();
-            return questionDtoMapper.mapToQuestionDto(result.get(0));
-        } catch(InterruptedException | IOException ex) {
-            LOGGER.error(ex.getMessage(), ex);
-            return null;
-        } catch (QuizApiQuestionNotFoundExcption | QuizApiRequestFailedException ex) {
-            java.util.logging.Logger.getLogger(QuestionService.class.getName()).log(Level.SEVERE, null, ex);
-            return null;
-        }
+    public QuestionDto getRandomQuestion() throws QuizApiQuestionNotFoundExcption, QuizApiRequestFailedException {
+        List<QuestionResponseDto> result = quizApiClient.getRandomQuestion();
+        return questionDtoMapper.mapToQuestionDto(result.get(0));
     } 
 }
