@@ -16,7 +16,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.util.CollectionUtils;
 import pl.agnieszkachalat.quizapp.client.dto.QuestionResponseDto;
-import pl.agnieszkachalat.quizapp.client.exception.QuizApiException;
+import pl.agnieszkachalat.quizapp.client.exception.QuizApiQuestionNotFoundExcption;
+import pl.agnieszkachalat.quizapp.client.exception.QuizApiRequestFailedException;
 import pl.agnieszkachalat.quizapp.enums.HttpStatusEnum;
 
 @Component
@@ -27,14 +28,14 @@ public class QuizApiClient {
     @Autowired private HttpClient httpClient;
     @Autowired private HttpRequest randomQuestionRequest;
     
-    public List<QuestionResponseDto> getRandomQuestion() throws IOException, InterruptedException, QuizApiException {
+    public List<QuestionResponseDto> getRandomQuestion() throws IOException, InterruptedException, QuizApiQuestionNotFoundExcption, QuizApiRequestFailedException {
         
         HttpResponse<String> response = httpClient.send(randomQuestionRequest, HttpResponse.BodyHandlers.ofString());
         
         if(response.statusCode() != 200) {
             HttpStatusEnum httpStatus = findStatusByCode(response.statusCode());
             String message = String.format(GET_RANDOM_QUESTION_REQUEST_FAILED, httpStatus.getStatusCode(), httpStatus.getDescription());
-            throw new QuizApiException(message);
+            throw new QuizApiRequestFailedException(message);
         }
         
         LOGGER.info("Quiz Api request for single random question was executed successfully.");
@@ -42,7 +43,7 @@ public class QuizApiClient {
         List<QuestionResponseDto> questions = new ObjectMapper().readValue(response.body(), new TypeReference<List<QuestionResponseDto>>() {});
         
         if(CollectionUtils.isEmpty(questions)) {
-            throw new QuizApiException(THERE_ARE_ANY_QUESTIONS);
+            throw new QuizApiQuestionNotFoundExcption(QUIZ_API_QUESTION_NOT_FOUND);
         }
         
         return questions;

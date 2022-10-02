@@ -15,7 +15,8 @@ import org.mockito.Mock;
 import org.mockito.Mockito;
 import pl.agnieszkachalat.quizapp.BaseTest;
 import pl.agnieszkachalat.quizapp.client.dto.QuestionResponseDto;
-import pl.agnieszkachalat.quizapp.client.exception.QuizApiException;
+import pl.agnieszkachalat.quizapp.client.exception.QuizApiQuestionNotFoundExcption;
+import pl.agnieszkachalat.quizapp.client.exception.QuizApiRequestFailedException;
 
 public class QuizApiClientTest extends BaseTest {
     
@@ -54,7 +55,7 @@ public class QuizApiClientTest extends BaseTest {
         Mockito.when(httpClient.send(randomQuestionRequest, HttpResponse.BodyHandlers.ofString())).thenReturn(response);
         Mockito.when(response.statusCode()).thenReturn(404);
         
-        QuizApiException exception = assertThrows(QuizApiException.class, () -> 
+        QuizApiRequestFailedException exception = assertThrows(QuizApiRequestFailedException.class, () -> 
                 quizApiClient.getRandomQuestion()
         );
         
@@ -71,10 +72,10 @@ public class QuizApiClientTest extends BaseTest {
         Mockito.when(response.statusCode()).thenReturn(200);
         Mockito.when(response.body()).thenReturn(jsonResponseString);
         
-        QuizApiException exception = assertThrows(QuizApiException.class, () -> 
+        QuizApiQuestionNotFoundExcption exception = assertThrows(QuizApiQuestionNotFoundExcption.class, () -> 
                 quizApiClient.getRandomQuestion()
         );
         
-        assertEquals(THERE_ARE_ANY_QUESTIONS, exception.getMessage());
+        assertEquals(QUIZ_API_QUESTION_NOT_FOUND, exception.getMessage());
     }
 }
