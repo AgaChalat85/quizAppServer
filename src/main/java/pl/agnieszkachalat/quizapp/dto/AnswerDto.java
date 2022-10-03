@@ -8,6 +8,7 @@ public class AnswerDto extends BaseDto {
     
     private String answer;
     private boolean correct;
+    private boolean selected;
     
     public AnswerDto(String answer, boolean correct) {
         this.answer = answer;
@@ -29,6 +30,14 @@ public class AnswerDto extends BaseDto {
     public void setCorrect(boolean correct) {
         this.correct = correct;
     }
+    
+    public boolean isSelected() {
+        return selected;
+    }
+
+    public void setSelected(boolean selected) {
+        this.selected = selected;
+    }
 
     @Override
     public int hashCode() {
@@ -37,12 +46,10 @@ public class AnswerDto extends BaseDto {
 
     @Override
     public boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
         if(!(obj instanceof AnswerDto)) {
             return false;
         }
+        
         final AnswerDto other = (AnswerDto) obj;
         return new EqualsBuilder().append(this.getId(), other.getId()).isEquals();
     }
@@ -52,6 +59,7 @@ public class AnswerDto extends BaseDto {
         return new ToStringBuilder(this).append("id", getId())
                                         .append("answer", answer)
                                         .append("correct", correct)
+                                        .append("selected", selected)
                                         .toString();
     }
 }

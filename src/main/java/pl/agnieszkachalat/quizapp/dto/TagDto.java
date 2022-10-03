@@ -23,12 +23,10 @@ public class TagDto extends BaseDto {
 
     @Override
     public boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
         if(!(obj instanceof TagDto)) {
             return false;
         }
+        
         final TagDto other = (TagDto) obj;
         return new EqualsBuilder().append(this.getName(), other.getName()).isEquals();
     }

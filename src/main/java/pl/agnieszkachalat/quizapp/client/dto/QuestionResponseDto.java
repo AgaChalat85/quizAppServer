@@ -75,12 +75,10 @@ public class QuestionResponseDto {
 
     @Override
     public boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
         if(!(obj instanceof QuestionResponseDto)) {
             return false;
         }
+        
         final QuestionResponseDto other = (QuestionResponseDto) obj;
         return new EqualsBuilder().append(this.getId(), other.getId()).isEquals();
     }

@@ -100,22 +100,17 @@ public class QuestionDto extends BaseDto {
     
     @Override
     public int hashCode() {
-        Long idToCompare = this.qstId != null ? this.qstId : getId();
-        return new HashCodeBuilder().append(idToCompare).toHashCode();
+        return new HashCodeBuilder().append(this.getId()).toHashCode();
     }
 
     @Override
     public boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
         if(!(obj instanceof QuestionDto)) {
             return false;
         }
+        
         final QuestionDto other = (QuestionDto) obj;
-        Long idToCompare = this.qstId != null ? this.qstId : getId();
-        Long otherIdToCompare = other.getQstId() != null ? other.getQstId() : other.getId();
-        return new EqualsBuilder().append(idToCompare, otherIdToCompare).isEquals();
+        return new EqualsBuilder().append(this.getId(), other.getId()).isEquals();
     }
     
     @Override
