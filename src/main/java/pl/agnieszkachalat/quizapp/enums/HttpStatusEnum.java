@@ -4,6 +4,7 @@ import java.util.Arrays;
 
 public enum HttpStatusEnum {
     OK(200, "OK"),
+    BAD_REQUEST(400, "Bad request"),
     UNAUTHENTICATED(401, "Unauthenticated"),
     NOT_FOUND(404, "No question found"),
     TOO_MANY_REQUESTS(429, "Too many requests"),
