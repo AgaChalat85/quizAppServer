@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>pl.agnieszkachalat</groupId>
 	<artifactId>quizAppServer</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0.0</version>
 	<name>quizAppServer</name>
 	<description>Application creating tests and quizes</description>
 	<properties>
