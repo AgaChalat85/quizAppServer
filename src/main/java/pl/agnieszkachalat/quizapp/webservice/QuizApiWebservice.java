@@ -11,7 +11,7 @@ import pl.agnieszkachalat.quizapp.dto.QuestionDto;
 import pl.agnieszkachalat.quizapp.service.QuestionService;
 
 @RestController
-@CrossOrigin(origins = "http://localhost:8080")
+@CrossOrigin(origins = "http://localhost:4200")
 @RequestMapping(value = "/v1/quizApi")
 public class QuizApiWebservice {
     

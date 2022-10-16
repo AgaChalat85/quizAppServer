@@ -8,11 +8,12 @@ public class AnswerDto extends BaseDto {
     
     private String answer;
     private boolean correct;
-    private boolean selected;
+    private int serial;
     
-    public AnswerDto(String answer, boolean correct) {
+    public AnswerDto(String answer, boolean correct, int serial) {
         this.answer = answer;
         this.correct = correct;
+        this.serial = serial;
     }
 
     public String getAnswer() {
@@ -31,14 +32,14 @@ public class AnswerDto extends BaseDto {
         this.correct = correct;
     }
     
-    public boolean isSelected() {
-        return selected;
+    public int getSerial() {
+        return serial;
     }
 
-    public void setSelected(boolean selected) {
-        this.selected = selected;
+    public void setSerial(int serial) {
+        this.serial = serial;
     }
-
+    
     @Override
     public int hashCode() {
         return new HashCodeBuilder().append(this.getId()).toHashCode();
@@ -59,7 +60,7 @@ public class AnswerDto extends BaseDto {
         return new ToStringBuilder(this).append("id", getId())
                                         .append("answer", answer)
                                         .append("correct", correct)
-                                        .append("selected", selected)
+                                        .append("serial", serial)
                                         .toString();
     }
 }

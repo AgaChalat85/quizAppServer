@@ -1,0 +1,168 @@
+2022-10-14 20:19:58.963  INFO 31524 --- [restartedMain] p.a.quizapp.QuizappApplication           : Starting QuizappApplication using Java 11.0.16.1 on LAPTOP-NSH6U059 with PID 31524 (C:\Users\48530\OneDrive\Dokumenty\NetBeansProjects\quizAppServer\target\classes started by 48530 in C:\Users\48530\OneDrive\Dokumenty\NetBeansProjects\quizAppServer)
+2022-10-14 20:19:58.971  INFO 31524 --- [restartedMain] p.a.quizapp.QuizappApplication           : No active profile set, falling back to 1 default profile: "default"
+2022-10-14 20:19:59.060  INFO 31524 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-10-14 20:19:59.061  INFO 31524 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-10-14 20:20:00.195  INFO 31524 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-10-14 20:20:00.234  INFO 31524 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 22 ms. Found 0 JPA repository interfaces.
+2022-10-14 20:20:01.364  INFO 31524 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-10-14 20:20:01.382  INFO 31524 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-10-14 20:20:01.384  INFO 31524 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-10-14 20:20:01.659  INFO 31524 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-10-14 20:20:01.660  INFO 31524 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2598 ms
+2022-10-14 20:20:01.716  INFO 31524 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-10-14 20:20:02.073  INFO 31524 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-10-14 20:20:02.094  INFO 31524 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:bf8f09e9-d592-4db2-bf5c-7dac3670afc3'
+2022-10-14 20:20:02.377  INFO 31524 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-10-14 20:20:02.464  INFO 31524 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.11.Final
+2022-10-14 20:20:02.718  INFO 31524 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-10-14 20:20:02.911  INFO 31524 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-10-14 20:20:03.187  INFO 31524 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-10-14 20:20:03.200  INFO 31524 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-10-14 20:20:03.768  WARN 31524 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-10-14 20:20:03.968  INFO 31524 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-10-14 20:20:04.151  INFO 31524 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-10-14 20:20:04.389  INFO 31524 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-10-14 20:20:04.390  INFO 31524 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2022-10-14 20:20:04.419  INFO 31524 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2022-10-14 20:20:04.450  INFO 31524 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-10-14 20:20:04.613  INFO 31524 --- [restartedMain] p.a.quizapp.QuizappApplication           : Started QuizappApplication in 6.26 seconds (JVM running for 7.126)
+2022-10-14 20:21:07.913  INFO 31524 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-10-14 20:21:07.915  INFO 31524 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-10-14 20:21:07.917  INFO 31524 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2022-10-14 20:21:09.540  INFO 31524 --- [http-nio-8080-exec-1] p.a.quizapp.client.QuizApiClient         : Quiz Api request for single random question was executed successfully.
+2022-10-14 20:22:35.455  INFO 31524 --- [http-nio-8080-exec-2] p.a.quizapp.client.QuizApiClient         : Quiz Api request for single random question was executed successfully.
+2022-10-14 20:22:54.669  INFO 31524 --- [http-nio-8080-exec-4] p.a.quizapp.client.QuizApiClient         : Quiz Api request for single random question was executed successfully.
+2022-10-14 20:23:26.511  INFO 31524 --- [http-nio-8080-exec-5] p.a.quizapp.client.QuizApiClient         : Quiz Api request for single random question was executed successfully.
+2022-10-14 20:25:13.727  INFO 31524 --- [http-nio-8080-exec-7] p.a.quizapp.client.QuizApiClient         : Quiz Api request for single random question was executed successfully.
+2022-10-14 20:25:37.668  INFO 31524 --- [http-nio-8080-exec-8] p.a.quizapp.client.QuizApiClient         : Quiz Api request for single random question was executed successfully.
+2022-10-14 20:26:47.632  INFO 31524 --- [http-nio-8080-exec-10] p.a.quizapp.client.QuizApiClient         : Quiz Api request for single random question was executed successfully.
+2022-10-14 20:27:42.112  INFO 31524 --- [http-nio-8080-exec-1] p.a.quizapp.client.QuizApiClient         : Quiz Api request for single random question was executed successfully.
+2022-10-14 20:27:55.828  INFO 31524 --- [http-nio-8080-exec-3] p.a.quizapp.client.QuizApiClient         : Quiz Api request for single random question was executed successfully.
+2022-10-14 20:29:54.087  INFO 31524 --- [http-nio-8080-exec-4] p.a.quizapp.client.QuizApiClient         : Quiz Api request for single random question was executed successfully.
+2022-10-14 20:30:16.231  INFO 31524 --- [http-nio-8080-exec-5] p.a.quizapp.client.QuizApiClient         : Quiz Api request for single random question was executed successfully.
+2022-10-14 20:32:55.352  INFO 31524 --- [http-nio-8080-exec-7] p.a.quizapp.client.QuizApiClient         : Quiz Api request for single random question was executed successfully.
+2022-10-14 20:33:37.554  INFO 31524 --- [http-nio-8080-exec-8] p.a.quizapp.client.QuizApiClient         : Quiz Api request for single random question was executed successfully.
+2022-10-14 20:33:41.125  INFO 31524 --- [http-nio-8080-exec-9] p.a.quizapp.client.QuizApiClient         : Quiz Api request for single random question was executed successfully.
+2022-10-14 20:33:48.224  INFO 31524 --- [http-nio-8080-exec-10] p.a.quizapp.client.QuizApiClient         : Quiz Api request for single random question was executed successfully.
+2022-10-14 20:34:12.337  INFO 31524 --- [http-nio-8080-exec-1] p.a.quizapp.client.QuizApiClient         : Quiz Api request for single random question was executed successfully.
+2022-10-14 20:34:29.140  INFO 31524 --- [http-nio-8080-exec-3] p.a.quizapp.client.QuizApiClient         : Quiz Api request for single random question was executed successfully.
+2022-10-14 20:37:10.160  INFO 31524 --- [http-nio-8080-exec-4] p.a.quizapp.client.QuizApiClient         : Quiz Api request for single random question was executed successfully.
+2022-10-14 20:37:16.628  INFO 31524 --- [http-nio-8080-exec-5] p.a.quizapp.client.QuizApiClient         : Quiz Api request for single random question was executed successfully.
+2022-10-14 20:37:45.794  INFO 31524 --- [http-nio-8080-exec-6] p.a.quizapp.client.QuizApiClient         : Quiz Api request for single random question was executed successfully.
+2022-10-14 20:37:50.608  INFO 31524 --- [http-nio-8080-exec-7] p.a.quizapp.client.QuizApiClient         : Quiz Api request for single random question was executed successfully.
+2022-10-14 20:37:52.310  INFO 31524 --- [http-nio-8080-exec-8] p.a.quizapp.client.QuizApiClient         : Quiz Api request for single random question was executed successfully.
+2022-10-14 20:37:54.063  INFO 31524 --- [http-nio-8080-exec-9] p.a.quizapp.client.QuizApiClient         : Quiz Api request for single random question was executed successfully.
+2022-10-14 20:37:55.160  INFO 31524 --- [http-nio-8080-exec-10] p.a.quizapp.client.QuizApiClient         : Quiz Api request for single random question was executed successfully.
+2022-10-14 20:37:56.355  INFO 31524 --- [http-nio-8080-exec-1] p.a.quizapp.client.QuizApiClient         : Quiz Api request for single random question was executed successfully.
+2022-10-14 20:47:00.711 ERROR 31524 --- [http-nio-8080-exec-2] .a.q.e.QuizApiWebserviceExceptionHandler : Quiz Api request for single random question failed
+
+pl.agnieszkachalat.quizapp.client.exception.QuizApiRequestFailedException: Quiz Api request for single random question failed
+	at pl.agnieszkachalat.quizapp.client.QuizApiClient.getRandomQuestion(QuizApiClient.java:51) ~[classes/:na]
+	at pl.agnieszkachalat.quizapp.service.QuestionService.getRandomQuestion(QuestionService.java:20) ~[classes/:na]
+	at pl.agnieszkachalat.quizapp.service.QuestionService$$FastClassBySpringCGLIB$$9011af58.invoke(<generated>) ~[classes/:na]
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218) ~[spring-core-5.3.23.jar:5.3.23]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:793) ~[spring-aop-5.3.23.jar:5.3.23]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.3.23.jar:5.3.23]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763) ~[spring-aop-5.3.23.jar:5.3.23]
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123) ~[spring-tx-5.3.23.jar:5.3.23]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:388) ~[spring-tx-5.3.23.jar:5.3.23]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-5.3.23.jar:5.3.23]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.23.jar:5.3.23]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763) ~[spring-aop-5.3.23.jar:5.3.23]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708) ~[spring-aop-5.3.23.jar:5.3.23]
+	at pl.agnieszkachalat.quizapp.service.QuestionService$$EnhancerBySpringCGLIB$$d43233a2.getRandomQuestion(<generated>) ~[classes/:na]
+	at pl.agnieszkachalat.quizapp.webservice.QuizApiWebservice.getRandomQuestion(QuizApiWebservice.java:22) ~[classes/:na]
+	at jdk.internal.reflect.GeneratedMethodAccessor51.invoke(Unknown Source) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-5.3.23.jar:5.3.23]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150) ~[spring-web-5.3.23.jar:5.3.23]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-5.3.23.jar:5.3.23]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.3.23.jar:5.3.23]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.23.jar:5.3.23]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.23.jar:5.3.23]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1071) ~[spring-webmvc-5.3.23.jar:5.3.23]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:964) ~[spring-webmvc-5.3.23.jar:5.3.23]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.23.jar:5.3.23]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) ~[spring-webmvc-5.3.23.jar:5.3.23]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655) ~[tomcat-embed-core-9.0.65.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.23.jar:5.3.23]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764) ~[tomcat-embed-core-9.0.65.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.23.jar:5.3.23]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.23.jar:5.3.23]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.23.jar:5.3.23]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.23.jar:5.3.23]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.23.jar:5.3.23]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.23.jar:5.3.23]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:890) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1789) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
+Caused by: java.io.IOException: Istniej鉍e po章czenie zosta這 gwa速ownie zamkni皻e przez zdalnego hosta
+	at java.net.http/jdk.internal.net.http.HttpClientImpl.send(HttpClientImpl.java:565) ~[java.net.http:na]
+	at java.net.http/jdk.internal.net.http.HttpClientFacade.send(HttpClientFacade.java:119) ~[java.net.http:na]
+	at pl.agnieszkachalat.quizapp.client.QuizApiClient.getRandomQuestion(QuizApiClient.java:33) ~[classes/:na]
+	... 63 common frames omitted
+Caused by: java.io.IOException: Istniej鉍e po章czenie zosta這 gwa速ownie zamkni皻e przez zdalnego hosta
+	at java.base/sun.nio.ch.SocketDispatcher.read0(Native Method) ~[na:na]
+	at java.base/sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43) ~[na:na]
+	at java.base/sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:276) ~[na:na]
+	at java.base/sun.nio.ch.IOUtil.read(IOUtil.java:233) ~[na:na]
+	at java.base/sun.nio.ch.IOUtil.read(IOUtil.java:223) ~[na:na]
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:358) ~[na:na]
+	at java.net.http/jdk.internal.net.http.SocketTube.readAvailable(SocketTube.java:1153) ~[java.net.http:na]
+	at java.net.http/jdk.internal.net.http.SocketTube$InternalReadPublisher$InternalReadSubscription.read(SocketTube.java:821) ~[java.net.http:na]
+	at java.net.http/jdk.internal.net.http.SocketTube$SocketFlowTask.run(SocketTube.java:175) ~[java.net.http:na]
+	at java.net.http/jdk.internal.net.http.common.SequentialScheduler$SchedulableTask.run(SequentialScheduler.java:198) ~[java.net.http:na]
+	at java.net.http/jdk.internal.net.http.common.SequentialScheduler.runOrSchedule(SequentialScheduler.java:271) ~[java.net.http:na]
+	at java.net.http/jdk.internal.net.http.common.SequentialScheduler.runOrSchedule(SequentialScheduler.java:224) ~[java.net.http:na]
+	at java.net.http/jdk.internal.net.http.SocketTube$InternalReadPublisher$InternalReadSubscription.signalReadable(SocketTube.java:763) ~[java.net.http:na]
+	at java.net.http/jdk.internal.net.http.SocketTube$InternalReadPublisher$ReadEvent.signalEvent(SocketTube.java:941) ~[java.net.http:na]
+	at java.net.http/jdk.internal.net.http.SocketTube$SocketFlowEvent.handle(SocketTube.java:245) ~[java.net.http:na]
+	at java.net.http/jdk.internal.net.http.HttpClientImpl$SelectorManager.handleEvent(HttpClientImpl.java:957) ~[java.net.http:na]
+	at java.net.http/jdk.internal.net.http.HttpClientImpl$SelectorManager.lambda$run$3(HttpClientImpl.java:912) ~[java.net.http:na]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541) ~[na:na]
+	at java.net.http/jdk.internal.net.http.HttpClientImpl$SelectorManager.run(HttpClientImpl.java:912) ~[java.net.http:na]
+
+2022-10-14 20:47:00.714  WARN 31524 --- [http-nio-8080-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [pl.agnieszkachalat.quizapp.client.exception.QuizApiRequestFailedException: Quiz Api request for single random question failed]
+2022-10-14 20:50:46.217  INFO 31524 --- [http-nio-8080-exec-4] p.a.quizapp.client.QuizApiClient         : Quiz Api request for single random question was executed successfully.
+2022-10-14 20:53:02.541  INFO 31524 --- [http-nio-8080-exec-6] p.a.quizapp.client.QuizApiClient         : Quiz Api request for single random question was executed successfully.
+2022-10-14 20:53:06.956  INFO 31524 --- [http-nio-8080-exec-7] p.a.quizapp.client.QuizApiClient         : Quiz Api request for single random question was executed successfully.
+2022-10-14 20:53:09.884  INFO 31524 --- [http-nio-8080-exec-8] p.a.quizapp.client.QuizApiClient         : Quiz Api request for single random question was executed successfully.
+2022-10-14 20:53:52.062  INFO 31524 --- [http-nio-8080-exec-9] p.a.quizapp.client.QuizApiClient         : Quiz Api request for single random question was executed successfully.
+2022-10-14 20:53:55.113  INFO 31524 --- [http-nio-8080-exec-10] p.a.quizapp.client.QuizApiClient         : Quiz Api request for single random question was executed successfully.
+2022-10-14 20:54:04.729  INFO 31524 --- [http-nio-8080-exec-1] p.a.quizapp.client.QuizApiClient         : Quiz Api request for single random question was executed successfully.
+2022-10-14 20:54:14.210  INFO 31524 --- [http-nio-8080-exec-3] p.a.quizapp.client.QuizApiClient         : Quiz Api request for single random question was executed successfully.
+2022-10-14 20:55:06.919  INFO 31524 --- [http-nio-8080-exec-2] p.a.quizapp.client.QuizApiClient         : Quiz Api request for single random question was executed successfully.
+2022-10-14 20:56:23.612  INFO 31524 --- [http-nio-8080-exec-5] p.a.quizapp.client.QuizApiClient         : Quiz Api request for single random question was executed successfully.
+2022-10-14 20:58:49.713  INFO 31524 --- [http-nio-8080-exec-7] p.a.quizapp.client.QuizApiClient         : Quiz Api request for single random question was executed successfully.
+2022-10-14 20:59:36.060  INFO 31524 --- [http-nio-8080-exec-8] p.a.quizapp.client.QuizApiClient         : Quiz Api request for single random question was executed successfully.
+2022-10-14 21:02:33.776  INFO 31524 --- [http-nio-8080-exec-10] p.a.quizapp.client.QuizApiClient         : Quiz Api request for single random question was executed successfully.
+2022-10-14 21:03:01.404  INFO 31524 --- [http-nio-8080-exec-1] p.a.quizapp.client.QuizApiClient         : Quiz Api request for single random question was executed successfully.
+2022-10-14 21:03:31.255  INFO 31524 --- [http-nio-8080-exec-3] p.a.quizapp.client.QuizApiClient         : Quiz Api request for single random question was executed successfully.
+2022-10-14 21:04:04.314  INFO 31524 --- [http-nio-8080-exec-2] p.a.quizapp.client.QuizApiClient         : Quiz Api request for single random question was executed successfully.
+2022-10-14 21:07:21.398  INFO 31524 --- [http-nio-8080-exec-5] p.a.quizapp.client.QuizApiClient         : Quiz Api request for single random question was executed successfully.
+2022-10-14 21:11:53.775  INFO 31524 --- [http-nio-8080-exec-7] p.a.quizapp.client.QuizApiClient         : Quiz Api request for single random question was executed successfully.

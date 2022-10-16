@@ -51,18 +51,23 @@ public class QuestionDtoMapperTest extends BaseTest {
         
         assertEquals(quizApiAnswers.getAnswer_a(), answers.get(0).getAnswer());
         assertEquals(quizApiCorrectAnswers.isAnswer_a_correct(), answers.get(0).isCorrect());
+        assertEquals(1, answers.get(0).getSerial());
         
         assertEquals(quizApiAnswers.getAnswer_b(), answers.get(1).getAnswer());
         assertEquals(quizApiCorrectAnswers.isAnswer_b_correct(), answers.get(1).isCorrect());
+        assertEquals(2, answers.get(1).getSerial());
         
         assertEquals(quizApiAnswers.getAnswer_c(), answers.get(2).getAnswer());
         assertEquals(quizApiCorrectAnswers.isAnswer_c_correct(), answers.get(2).isCorrect());
+        assertEquals(3, answers.get(2).getSerial());
         
         assertEquals(quizApiAnswers.getAnswer_d(), answers.get(3).getAnswer());
         assertEquals(quizApiCorrectAnswers.isAnswer_d_correct(), answers.get(3).isCorrect());
+        assertEquals(4, answers.get(3).getSerial());
         
         assertEquals(quizApiAnswers.getAnswer_e(), answers.get(4).getAnswer());
         assertEquals(quizApiCorrectAnswers.isAnswer_e_correct(), answers.get(4).isCorrect());
+        assertEquals(5, answers.get(4).getSerial());
     }
     
     private void assertTags(List<TagResponseDto> apiTags, List<TagDto> tags) {

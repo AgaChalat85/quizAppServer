@@ -22,27 +22,27 @@ public interface AnswerDtoMapper {
         CorrectAnswersResponseDto quizApiCorrectAnswers = responseDto.getCorrect_answers();
         
         if(!StringUtils.isEmpty(quizApiAnswers.getAnswer_a())) {
-            answerDtoList.add(new AnswerDto(quizApiAnswers.getAnswer_a(), quizApiCorrectAnswers.isAnswer_a_correct()));
+            answerDtoList.add(new AnswerDto(quizApiAnswers.getAnswer_a(), quizApiCorrectAnswers.isAnswer_a_correct(), 1));
         }
         
         if(!StringUtils.isEmpty(quizApiAnswers.getAnswer_b())) {
-            answerDtoList.add(new AnswerDto(quizApiAnswers.getAnswer_b(), quizApiCorrectAnswers.isAnswer_b_correct()));
+            answerDtoList.add(new AnswerDto(quizApiAnswers.getAnswer_b(), quizApiCorrectAnswers.isAnswer_b_correct(), 2));
         }
         
         if(!StringUtils.isEmpty(quizApiAnswers.getAnswer_c())) {
-            answerDtoList.add(new AnswerDto(quizApiAnswers.getAnswer_c(), quizApiCorrectAnswers.isAnswer_c_correct()));
+            answerDtoList.add(new AnswerDto(quizApiAnswers.getAnswer_c(), quizApiCorrectAnswers.isAnswer_c_correct(), 3));
         }
         
         if(!StringUtils.isEmpty(quizApiAnswers.getAnswer_d())) {
-            answerDtoList.add(new AnswerDto(quizApiAnswers.getAnswer_d(), quizApiCorrectAnswers.isAnswer_d_correct()));
+            answerDtoList.add(new AnswerDto(quizApiAnswers.getAnswer_d(), quizApiCorrectAnswers.isAnswer_d_correct(), 4));
         }
         
         if(!StringUtils.isEmpty(quizApiAnswers.getAnswer_e())) {
-            answerDtoList.add(new AnswerDto(quizApiAnswers.getAnswer_e(), quizApiCorrectAnswers.isAnswer_e_correct()));
+            answerDtoList.add(new AnswerDto(quizApiAnswers.getAnswer_e(), quizApiCorrectAnswers.isAnswer_e_correct(), 5));
         }
         
         if(!StringUtils.isEmpty(quizApiAnswers.getAnswer_f())) {
-            answerDtoList.add(new AnswerDto(quizApiAnswers.getAnswer_f(), quizApiCorrectAnswers.isAnswer_f_correct()));
+            answerDtoList.add(new AnswerDto(quizApiAnswers.getAnswer_f(), quizApiCorrectAnswers.isAnswer_f_correct(), 6));
         }
         
         return answerDtoList;
