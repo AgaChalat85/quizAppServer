@@ -54,8 +54,8 @@ public class QuizApiClient {
             throw new QuizApiRequestFailedException(GET_RANDOM_QUESTION_REQUEST_FAILED, ex);
         }
     }
-    public List<QuestionResponseDto> getQuestionByCriteria(String category, String difficulty, Integer limit ) {
-        HttpRequest questionsByParameter = httpRequestFactory.createHttpRequest(new CriteriaDto(category, difficulty, limit, null));
+    public List<QuestionResponseDto> getQuestionByCriteria(CriteriaDto criteria) {
+        HttpRequest questionsByParameter = httpRequestFactory.createHttpRequest(criteria);
 
         try {
             HttpResponse<String> response = httpClient.send(questionsByParameter, HttpResponse.BodyHandlers.ofString());
@@ -66,7 +66,7 @@ public class QuizApiClient {
                 throw new QuizApiRequestFailedException(message);
             }
 
-            LOGGER.info("Quiz Api request for single question by category was executed successfully.");
+            LOGGER.info("Quiz Api request for quiz questions by criteria was executed successfully.");
 
             List<QuestionResponseDto> questions = JSONUtils.convertJSONStringToQuestionResponseDtoList(response.body());
 
@@ -76,7 +76,7 @@ public class QuizApiClient {
 
             return questions;
         } catch (IOException | InterruptedException ex) {
-            throw new QuizApiRequestFailedException(GET_RANDOM_QUESTION_REQUEST_FAILED, ex);
+            throw new QuizApiRequestFailedException(GET_MULTIPLE_QUESTION_REQUEST_FAILED, ex);
         }
 
     }
