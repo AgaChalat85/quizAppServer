@@ -2,13 +2,13 @@ package pl.agnieszkachalat.quizapp.dto;
 
 import org.apache.commons.lang3.builder.ToStringBuilder;
 
-public class ParametersDto extends BaseDto {
+public class CriteriaDto extends BaseDto {
 
     private String category;
     private String difficulty;
     private Integer limit;
 
-    public ParametersDto(String category, String difficulty, Integer limit) {
+    public CriteriaDto(String category, String difficulty, Integer limit) {
         this.category = category;
         this.difficulty = difficulty;
         this.limit = limit;

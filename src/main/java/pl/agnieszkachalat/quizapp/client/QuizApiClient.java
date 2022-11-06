@@ -16,7 +16,7 @@ import org.springframework.util.CollectionUtils;
 import pl.agnieszkachalat.quizapp.client.dto.QuestionResponseDto;
 import pl.agnieszkachalat.quizapp.client.exception.QuizApiQuestionNotFoundExcption;
 import pl.agnieszkachalat.quizapp.client.exception.QuizApiRequestFailedException;
-import pl.agnieszkachalat.quizapp.dto.ParametersDto;
+import pl.agnieszkachalat.quizapp.dto.CriteriaDto;
 import pl.agnieszkachalat.quizapp.enums.HttpStatusEnum;
 import pl.agnieszkachalat.quizapp.util.JSONUtils;
 
@@ -31,7 +31,7 @@ public class QuizApiClient {
     private HttpRequestFactory httpRequestFactory;
     
     public List<QuestionResponseDto> getRandomQuestion() throws QuizApiQuestionNotFoundExcption, QuizApiRequestFailedException {
-        HttpRequest randomQuestion = httpRequestFactory.createHttpRequest(new ParametersDto(null, null, 1));
+        HttpRequest randomQuestion = httpRequestFactory.createHttpRequest(new CriteriaDto(null, null, 1));
         try {
             HttpResponse<String> response = httpClient.send(randomQuestion, HttpResponse.BodyHandlers.ofString());
 
@@ -54,8 +54,8 @@ public class QuizApiClient {
             throw new QuizApiRequestFailedException(GET_RANDOM_QUESTION_REQUEST_FAILED, ex);
         }
     }
-    public List<QuestionResponseDto> getQuestionByParameters(String category, String difficulty, Integer limit ) {
-        HttpRequest questionsByParameter = httpRequestFactory.createHttpRequest(new ParametersDto(category, difficulty, limit));
+    public List<QuestionResponseDto> getQuestionByCriteria(String category, String difficulty, Integer limit ) {
+        HttpRequest questionsByParameter = httpRequestFactory.createHttpRequest(new CriteriaDto(category, difficulty, limit));
 
         try {
             HttpResponse<String> response = httpClient.send(questionsByParameter, HttpResponse.BodyHandlers.ofString());
