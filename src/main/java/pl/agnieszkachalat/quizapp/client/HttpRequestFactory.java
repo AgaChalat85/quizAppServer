@@ -8,6 +8,8 @@ import pl.agnieszkachalat.quizapp.dto.CriteriaDto;
 
 import java.net.URI;
 import java.net.http.HttpRequest;
+import org.apache.commons.lang3.StringUtils;
+import org.springframework.util.CollectionUtils;
 
 import static pl.agnieszkachalat.quizapp.enums.QuizApiParameterEnum.*;
 
@@ -32,14 +34,17 @@ public class HttpRequestFactory {
 
     private URI createUriWithParameters(CriteriaDto criteria) {
         UriComponentsBuilder uriBuilder = UriComponentsBuilder.fromHttpUrl(propertiesProvider.getQuestionsEndpointUri());
-        if (criteria.getCategory() != null) {
+        if (!StringUtils.isEmpty(criteria.getCategory())) {
             uriBuilder.queryParam(CATEGORY.getName(), criteria.getCategory());
         }
-        if (criteria.getDifficulty() != null) {
+        if (!StringUtils.isEmpty(criteria.getDifficulty())) {
             uriBuilder.queryParam(DIFFICULTY.getName(), criteria.getDifficulty());
         }
         if (criteria.getLimit()!= null) {
             uriBuilder.queryParam(LIMIT.getName(), criteria.getLimit());
+        }
+        if(!CollectionUtils.isEmpty(criteria.getTags())) {
+            uriBuilder.queryParam(TAGS.getName(), criteria.getTags());
         }
 
         return uriBuilder.build()
