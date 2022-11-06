@@ -1,0 +1,162 @@
+[
+    {
+        "id": 1,
+        "question": "Which are the notable application areas for Docker?",
+        "description": null,
+        "answers": {
+            "answer_a": "Simplifying configuration, Code pipelines management, Debugging capabilities and Rapid deployment.",
+            "answer_b": "Robust, Transparency, code illustrator and slow deployment",
+            "answer_c": null,
+            "answer_d": null,
+            "answer_e": null,
+            "answer_f": null
+        },
+        "multiple_correct_answers": "false",
+        "correct_answers": {
+            "answer_a_correct": "true",
+            "answer_b_correct": "false",
+            "answer_c_correct": "false",
+            "answer_d_correct": "false",
+            "answer_e_correct": "false",
+            "answer_f_correct": "false"
+        },
+        "correct_answer": "answer_a",
+        "explanation": null,
+        "tip": null,
+        "tags": [
+            {
+                "name": "Docker"
+            }
+        ],
+        "category": "Docker",
+        "difficulty": "Medium"
+    },
+    {
+        "id": 2,
+        "question": "Once a table has been created in MySQL, its structure cannot be altered",
+        "description": null,
+        "answers": {
+            "answer_a": "True",
+            "answer_b": "False",
+            "answer_c": null,
+            "answer_d": null,
+            "answer_e": null,
+            "answer_f": null
+        },
+        "multiple_correct_answers": "false",
+        "correct_answers": {
+            "answer_a_correct": "false",
+            "answer_b_correct": "true",
+            "answer_c_correct": "false",
+            "answer_d_correct": "false",
+            "answer_e_correct": "false",
+            "answer_f_correct": "false"
+        },
+        "correct_answer": "answer_a",
+        "explanation": null,
+        "tip": null,
+        "tags": [
+            {
+                "name": "MySQL"
+            }
+        ],
+        "category": "SQL",
+        "difficulty": "Easy"
+    },
+    {
+        "id": 3,
+        "question": "PHP server scripts are surrounded by delimiters, which?",
+        "description": null,
+        "answers": {
+            "answer_a": "<&>...</&>",
+            "answer_b": "<?php...?>",
+            "answer_c": "<?php>...</?>",
+            "answer_d": "<script>...</script>",
+            "answer_e": null,
+            "answer_f": null
+        },
+        "multiple_correct_answers": "false",
+        "correct_answers": {
+            "answer_a_correct": "false",
+            "answer_b_correct": "true",
+            "answer_c_correct": "false",
+            "answer_d_correct": "false",
+            "answer_e_correct": "false",
+            "answer_f_correct": "false"
+        },
+        "correct_answer": "answer_b",
+        "explanation": null,
+        "tip": null,
+        "tags": [
+            {
+                "name": "PHP"
+            }
+        ],
+        "category": "",
+        "difficulty": "Easy"
+    },
+    {
+        "id": 4,
+        "question": "Which HTML Tag is used to define a client - side script such as the Javascript?",
+        "description": null,
+        "answers": {
+            "answer_a": "<unscript>",
+            "answer_b": "None Of The Above",
+            "answer_c": "Both Above",
+            "answer_d": "<script>",
+            "answer_e": null,
+            "answer_f": null
+        },
+        "multiple_correct_answers": "false",
+        "correct_answers": {
+            "answer_a_correct": "false",
+            "answer_b_correct": "false",
+            "answer_c_correct": "false",
+            "answer_d_correct": "true",
+            "answer_e_correct": "false",
+            "answer_f_correct": "false"
+        },
+        "correct_answer": "answer_a",
+        "explanation": null,
+        "tip": null,
+        "tags": [
+            {
+                "name": "HTML"
+            }
+        ],
+        "category": "Code",
+        "difficulty": "Hard"
+    },
+    {
+        "id": 5,
+        "question": "What are the different components of Kubernetes Architecture?",
+        "description": null,
+        "answers": {
+            "answer_a": "The Kubernetes Architecture has mainly 2 components – the master node and the worker node.",
+            "answer_b": "The Kubernetes Architecture has mainly 2 components – the service and the worker path.",
+            "answer_c": null,
+            "answer_d": null,
+            "answer_e": null,
+            "answer_f": null
+        },
+        "multiple_correct_answers": "false",
+        "correct_answers": {
+            "answer_a_correct": "true",
+            "answer_b_correct": "false",
+            "answer_c_correct": "false",
+            "answer_d_correct": "false",
+            "answer_e_correct": "false",
+            "answer_f_correct": "false"
+        },
+        "correct_answer": null,
+        "explanation": null,
+        "tip": null,
+        "tags": [
+            {
+                "name": "Kubernetes"
+            }
+        ],
+        "category": "DevOps",
+        "difficulty": "Medium"
+    }
+]

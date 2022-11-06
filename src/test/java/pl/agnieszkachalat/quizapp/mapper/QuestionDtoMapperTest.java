@@ -43,6 +43,25 @@ public class QuestionDtoMapperTest extends BaseTest {
         assertEquals(quizApiQuestion.getDifficulty(), question.getDifficulty());
     }
     
+    @Test
+    public void thatMappingToQuestionDtoListWorks() throws Exception {
+        String jsonResponseString = getFileAsString("json/QuestionDtoMapperTest_thatMappingToQuestionDtoListWorks.json");
+        
+        List<QuestionResponseDto> quizApiQuestionList = new ObjectMapper().readValue(jsonResponseString, new TypeReference<List<QuestionResponseDto>>() {});
+        
+        assertNotNull(quizApiQuestionList);
+        assertFalse(quizApiQuestionList.isEmpty());
+        assertEquals(5, quizApiQuestionList.size());
+        
+        List<QuestionDto> questionList = questionDtoMapper.mapToQuestionDtoList(quizApiQuestionList);
+        
+        assertNotNull(questionList);
+        assertFalse(questionList.isEmpty());
+        assertEquals(quizApiQuestionList.size(), questionList.size());
+        
+        assertIds(quizApiQuestionList, questionList);
+    }
+    
     private void assertAnswers(QuestionResponseDto quizApiQuestion, List<AnswerDto> answers) {
         assertEquals(5, answers.size());
         
@@ -74,5 +93,11 @@ public class QuestionDtoMapperTest extends BaseTest {
         assertEquals(apiTags.size(), tags.size());
         assertEquals(apiTags.get(0).getName(), tags.get(0).getName());
         assertEquals(apiTags.get(1).getName(), tags.get(1).getName());
+    }
+    
+    private void assertIds(List<QuestionResponseDto> quizApiQuestionList, List<QuestionDto> questionList) {
+        for(int i = 0; i < quizApiQuestionList.size(); i++) {
+            assertEquals(quizApiQuestionList.get(i).getId(), questionList.get(i).getQstId());
+        }
     }
 }
