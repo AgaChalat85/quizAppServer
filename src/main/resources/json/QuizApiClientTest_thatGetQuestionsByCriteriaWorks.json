@@ -1,0 +1,165 @@
+[
+    {
+        "id": 1071,
+        "question": "From which file does the command `free` takes it's information",
+        "description": null,
+        "answers": {
+            "answer_a": "/proc/meminfo",
+            "answer_b": "/proc/freemem",
+            "answer_c": "/proc/memfree",
+            "answer_d": "/dev/meminfo",
+            "answer_e": "/dev/freemem",
+            "answer_f": "/dev/memfree"
+        },
+        "multiple_correct_answers": "false",
+        "correct_answers": {
+            "answer_a_correct": "true",
+            "answer_b_correct": "false",
+            "answer_c_correct": "false",
+            "answer_d_correct": "false",
+            "answer_e_correct": "false",
+            "answer_f_correct": "false"
+        },
+        "correct_answer": null,
+        "explanation": null,
+        "tip": null,
+        "tags": [
+            {
+                "name": "Linux"
+            }
+        ],
+        "category": "Linux",
+        "difficulty": "Easy"
+    },
+    {
+        "id": 682,
+        "question": "Expand JFS in context of file system?",
+        "description": null,
+        "answers": {
+            "answer_a": "Journal File System",
+            "answer_b": "Journal Failing System",
+            "answer_c": "Journal File Service",
+            "answer_d": "Journal Failing Service",
+            "answer_e": null,
+            "answer_f": null
+        },
+        "multiple_correct_answers": "false",
+        "correct_answers": {
+            "answer_a_correct": "true",
+            "answer_b_correct": "false",
+            "answer_c_correct": "false",
+            "answer_d_correct": "false",
+            "answer_e_correct": "false",
+            "answer_f_correct": "false"
+        },
+        "correct_answer": null,
+        "explanation": null,
+        "tip": null,
+        "tags": [
+            {
+                "name": "BASH"
+            }
+        ],
+        "category": "Linux",
+        "difficulty": "Easy"
+    },
+    {
+        "id": 707,
+        "question": "Which is the environment variable which holds your home directory information?",
+        "description": null,
+        "answers": {
+            "answer_a": "HOME.",
+            "answer_b": "ROOT.",
+            "answer_c": "ADMINISTRATOR",
+            "answer_d": "It's generated dynamically",
+            "answer_e": null,
+            "answer_f": null
+        },
+        "multiple_correct_answers": "false",
+        "correct_answers": {
+            "answer_a_correct": "true",
+            "answer_b_correct": "false",
+            "answer_c_correct": "false",
+            "answer_d_correct": "false",
+            "answer_e_correct": "false",
+            "answer_f_correct": "false"
+        },
+        "correct_answer": null,
+        "explanation": null,
+        "tip": null,
+        "tags": [
+            {
+                "name": "Linux"
+            },
+            {
+                "name": "BASH"
+            }
+        ],
+        "category": "Linux",
+        "difficulty": "Easy"
+    },
+    {
+        "id": 719,
+        "question": "The kube-apiserver on Kubernetes master is designed to scale:",
+        "description": null,
+        "answers": {
+            "answer_a": "Vertically",
+            "answer_b": "Horizontally",
+            "answer_c": "kube-apiserver is not used for scaling",
+            "answer_d": null,
+            "answer_e": null,
+            "answer_f": null
+        },
+        "multiple_correct_answers": "false",
+        "correct_answers": {
+            "answer_a_correct": "false",
+            "answer_b_correct": "true",
+            "answer_c_correct": "false",
+            "answer_d_correct": "false",
+            "answer_e_correct": "false",
+            "answer_f_correct": "false"
+        },
+        "correct_answer": "answer_a",
+        "explanation": "The Kubernetes API server validates and configures data for the api objects which include pods, services, replicationcontrollers, and others. The API Server services REST operations and provides the frontend to the cluster’s shared state through which all other components interact.",
+        "tip": null,
+        "tags": [
+            {
+                "name": "Kubernetes"
+            }
+        ],
+        "category": "Linux",
+        "difficulty": "Easy"
+    },
+    {
+        "id": 650,
+        "question": "Which command is used to copy file across different system?",
+        "description": null,
+        "answers": {
+            "answer_a": "rcp",
+            "answer_b": "scp",
+            "answer_c": "mcp",
+            "answer_d": "ncp",
+            "answer_e": "rsync",
+            "answer_f": null
+        },
+        "multiple_correct_answers": "true",
+        "correct_answers": {
+            "answer_a_correct": "false",
+            "answer_b_correct": "true",
+            "answer_c_correct": "false",
+            "answer_d_correct": "false",
+            "answer_e_correct": "true",
+            "answer_f_correct": "false"
+        },
+        "correct_answer": "answer_a",
+        "explanation": null,
+        "tip": null,
+        "tags": [
+            {
+                "name": "BASH"
+            }
+        ],
+        "category": "Linux",
+        "difficulty": "Easy"
+    }
+]

@@ -6,6 +6,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -26,7 +27,7 @@ public class QuizApiWebservice {
         return new ResponseEntity<>(question, HttpStatus.OK);
     }
     
-    @GetMapping(value = "/questionsByCriteria")
+    @PostMapping(value = "/questionsByCriteria")
     public ResponseEntity<List<QuestionDto>> getQuestionsByCriteria(@RequestBody CriteriaDto criteria) {
         List<QuestionDto> questions = questionService.getQuestionsByCriteria(criteria);
         return new ResponseEntity<>(questions, HttpStatus.OK);

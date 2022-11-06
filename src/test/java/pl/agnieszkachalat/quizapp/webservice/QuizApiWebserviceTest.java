@@ -1,9 +1,11 @@
 package pl.agnieszkachalat.quizapp.webservice;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.*;
 
 import java.net.http.*;
+import org.hamcrest.Matchers;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.ArgumentMatchers;
@@ -23,6 +25,7 @@ import pl.agnieszkachalat.quizapp.dto.CriteriaDto;
 public class QuizApiWebserviceTest extends BaseTest {
     
     private static final String GET_RANDOM_QUESTION_URI = "/v1/quizApi/randomQuestion";
+    private static final String GET_QUESTIONS_BY_CRITERIA = "/v1/quizApi/questionsByCriteria";
     
     @MockBean private HttpClient httpClient;
     @MockBean private HttpRequest request;
@@ -71,5 +74,29 @@ public class QuizApiWebserviceTest extends BaseTest {
         mockMvc.perform(MockMvcRequestBuilders.get(GET_RANDOM_QUESTION_URI)
                                               .accept(MediaType.APPLICATION_JSON))
                                               .andExpect(status().isBadRequest());
+    }
+    
+    @Test
+    public void thatGetQuestionsByCriteriaEndpointWorks() throws Exception {
+        String jsonResponseString = getFileAsString("json/QuizApiClientTest_thatGetQuestionsByCriteriaWorks.json");
+        
+        Mockito.when(httpClient.send(request, HttpResponse.BodyHandlers.ofString())).thenReturn(response);
+        Mockito.when(response.statusCode()).thenReturn(200);
+        Mockito.when(response.body()).thenReturn(jsonResponseString);
+        
+        CriteriaDto criteria = new CriteriaDto("Linux", "Easy", 5, null);
+        String contentString = new ObjectMapper().writeValueAsString(criteria);
+        
+        mockMvc.perform(MockMvcRequestBuilders.post(GET_QUESTIONS_BY_CRITERIA)
+                                              .contentType(MediaType.APPLICATION_JSON)
+                                              .content(contentString) 
+                                              .accept(MediaType.APPLICATION_JSON))
+                                              .andExpect(status().isOk())
+                                              .andExpect(jsonPath("$", Matchers.hasSize(5)))
+                                              .andExpect(jsonPath("$[0].qstId").value(1071L))
+                                              .andExpect(jsonPath("$[1].qstId").value(682L))
+                                              .andExpect(jsonPath("$[2].qstId").value(707L))
+                                              .andExpect(jsonPath("$[3].qstId").value(719L))
+                                              .andExpect(jsonPath("$[4].qstId").value(650L)); 
     }
 }

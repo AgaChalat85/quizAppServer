@@ -110,4 +110,25 @@ public class QuizApiClientTest extends BaseTest {
         
         assertEquals(GET_RANDOM_QUESTION_REQUEST_FAILED, exception.getMessage());
     }
+    
+    @Test
+    public void thatGetQuestionsByCriteriaWorks() throws Exception {
+        String jsonResponseString = getFileAsString("json/QuizApiClientTest_thatGetQuestionsByCriteriaWorks.json");
+        
+        assertNotNull(jsonResponseString);
+        
+        Mockito.when(httpClient.send(request, HttpResponse.BodyHandlers.ofString())).thenReturn(response);
+        Mockito.when(response.statusCode()).thenReturn(200);
+        Mockito.when(response.body()).thenReturn(jsonResponseString);
+        
+        CriteriaDto criteria = new CriteriaDto("Linux", "Easy", 5, null);
+        
+        List<QuestionResponseDto> resultList = quizApiClient.getQuestionByCriteria(criteria);
+        
+        assertNotNull(resultList);
+        assertEquals(5, resultList.size());
+        
+        resultList.forEach(question -> assertEquals("Linux", question.getCategory()));
+        resultList.forEach(question -> assertEquals("Easy", question.getDifficulty()));
+    }
 }
