@@ -26,13 +26,13 @@ public class QuizApiClientTest extends BaseTest {
     
     @InjectMocks private QuizApiClient quizApiClient;
     @Mock private HttpClient httpClient;
-    @Mock private HttpRequest randomQuestionRequest;
+    @Mock private HttpRequest request;
     @Mock private HttpRequestFactory httpRequestFactory;
     @Mock private HttpResponse response;
     
     @BeforeEach
     public void init() {
-         Mockito.when(httpRequestFactory.createHttpRequest(ArgumentMatchers.any(CriteriaDto.class))).thenReturn(randomQuestionRequest);
+         Mockito.when(httpRequestFactory.createHttpRequest(ArgumentMatchers.any(CriteriaDto.class))).thenReturn(request);
     }
     
     
@@ -42,7 +42,7 @@ public class QuizApiClientTest extends BaseTest {
         
         assertNotNull(jsonResponseString);
         
-        Mockito.when(httpClient.send(randomQuestionRequest, HttpResponse.BodyHandlers.ofString())).thenReturn(response);
+        Mockito.when(httpClient.send(request, HttpResponse.BodyHandlers.ofString())).thenReturn(response);
         Mockito.when(response.statusCode()).thenReturn(200);
         Mockito.when(response.body()).thenReturn(jsonResponseString);
         
@@ -62,7 +62,7 @@ public class QuizApiClientTest extends BaseTest {
     
     @Test
     public void thatGetRandomQuestionFailedWithWrongStatus() throws Exception{
-        Mockito.when(httpClient.send(randomQuestionRequest, HttpResponse.BodyHandlers.ofString())).thenReturn(response);
+        Mockito.when(httpClient.send(request, HttpResponse.BodyHandlers.ofString())).thenReturn(response);
         Mockito.when(response.statusCode()).thenReturn(404);
         
         QuizApiRequestFailedException exception = assertThrows(QuizApiRequestFailedException.class, () -> 
@@ -78,7 +78,7 @@ public class QuizApiClientTest extends BaseTest {
     public void thatGetRandomQuestionGivesAnyResult() throws Exception {
         String jsonResponseString = "[]";
         
-        Mockito.when(httpClient.send(randomQuestionRequest, HttpResponse.BodyHandlers.ofString())).thenReturn(response);
+        Mockito.when(httpClient.send(request, HttpResponse.BodyHandlers.ofString())).thenReturn(response);
         Mockito.when(response.statusCode()).thenReturn(200);
         Mockito.when(response.body()).thenReturn(jsonResponseString);
         
@@ -91,7 +91,7 @@ public class QuizApiClientTest extends BaseTest {
     
     @Test
     public void thatGetRandomQuestionRequestThrowsIOException() throws Exception {
-        Mockito.when(httpClient.send(randomQuestionRequest, HttpResponse.BodyHandlers.ofString())).thenThrow(IOException.class);
+        Mockito.when(httpClient.send(request, HttpResponse.BodyHandlers.ofString())).thenThrow(IOException.class);
         
         QuizApiRequestFailedException exception = assertThrows(QuizApiRequestFailedException.class, () -> 
                 quizApiClient.getRandomQuestion()
@@ -102,7 +102,7 @@ public class QuizApiClientTest extends BaseTest {
     
     @Test
     public void thatGetRandomQuestionRequestThrowsInterruptedException() throws Exception {
-        Mockito.when(httpClient.send(randomQuestionRequest, HttpResponse.BodyHandlers.ofString())).thenThrow(InterruptedException.class);
+        Mockito.when(httpClient.send(request, HttpResponse.BodyHandlers.ofString())).thenThrow(InterruptedException.class);
         
         QuizApiRequestFailedException exception = assertThrows(QuizApiRequestFailedException.class, () -> 
                 quizApiClient.getRandomQuestion()
