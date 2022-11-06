@@ -9,8 +9,10 @@ import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.util.List;
+import org.junit.jupiter.api.BeforeEach;
 
 import org.junit.jupiter.api.Test;
+import org.mockito.ArgumentMatchers;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.Mockito;
@@ -18,13 +20,20 @@ import pl.agnieszkachalat.quizapp.BaseTest;
 import pl.agnieszkachalat.quizapp.client.dto.QuestionResponseDto;
 import pl.agnieszkachalat.quizapp.client.exception.QuizApiQuestionNotFoundExcption;
 import pl.agnieszkachalat.quizapp.client.exception.QuizApiRequestFailedException;
+import pl.agnieszkachalat.quizapp.dto.CriteriaDto;
 
 public class QuizApiClientTest extends BaseTest {
     
     @InjectMocks private QuizApiClient quizApiClient;
     @Mock private HttpClient httpClient;
     @Mock private HttpRequest randomQuestionRequest;
+    @Mock private HttpRequestFactory httpRequestFactory;
     @Mock private HttpResponse response;
+    
+    @BeforeEach
+    public void init() {
+         Mockito.when(httpRequestFactory.createHttpRequest(ArgumentMatchers.any(CriteriaDto.class))).thenReturn(randomQuestionRequest);
+    }
     
     
     @Test
