@@ -1,0 +1,34 @@
+2022-10-31 19:51:26.104  INFO 23280 --- [restartedMain] p.a.quizapp.QuizappApplication           : Starting QuizappApplication using Java 11.0.16.1 on LAPTOP-NSH6U059 with PID 23280 (C:\Users\48530\OneDrive\Dokumenty\NetBeansProjects\quizAppServer\target\classes started by 48530 in C:\Users\48530\OneDrive\Dokumenty\NetBeansProjects\quizAppServer)
+2022-10-31 19:51:26.113  INFO 23280 --- [restartedMain] p.a.quizapp.QuizappApplication           : No active profile set, falling back to 1 default profile: "default"
+2022-10-31 19:51:26.156  INFO 23280 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-10-31 19:51:26.157  INFO 23280 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-10-31 19:51:26.982  INFO 23280 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-10-31 19:51:27.004  INFO 23280 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 12 ms. Found 0 JPA repository interfaces.
+2022-10-31 19:51:27.524  INFO 23280 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-10-31 19:51:27.534  INFO 23280 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-10-31 19:51:27.535  INFO 23280 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-10-31 19:51:27.620  INFO 23280 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-10-31 19:51:27.621  INFO 23280 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1463 ms
+2022-10-31 19:51:27.647  INFO 23280 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-10-31 19:51:27.771  INFO 23280 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-10-31 19:51:27.785  INFO 23280 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:c50409e9-bdf9-4ef8-b25c-9ef2780deb90'
+2022-10-31 19:51:27.925  INFO 23280 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-10-31 19:51:27.979  INFO 23280 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.11.Final
+2022-10-31 19:51:28.132  INFO 23280 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-10-31 19:51:28.247  INFO 23280 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-10-31 19:51:28.397  INFO 23280 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-10-31 19:51:28.407  INFO 23280 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-10-31 19:51:28.704  WARN 23280 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-10-31 19:51:28.802  INFO 23280 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-10-31 19:51:28.948  INFO 23280 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-10-31 19:51:29.107  INFO 23280 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-10-31 19:51:29.108  INFO 23280 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2022-10-31 19:51:29.121  INFO 23280 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2022-10-31 19:51:29.147  INFO 23280 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-10-31 19:51:29.316  INFO 23280 --- [restartedMain] p.a.quizapp.QuizappApplication           : Started QuizappApplication in 3.596 seconds (JVM running for 4.597)
+2022-10-31 19:58:08.731  INFO 23280 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-10-31 19:58:08.732  INFO 23280 --- [SpringApplicationShutdownHook] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2022-10-31 19:58:08.950  WARN 23280 --- [SpringApplicationShutdownHook] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Baza danych jest już zamknięta (aby zablokować samoczynne zamykanie podczas zamknięcia VM dodaj ";DB_CLOSE_ON_EXIT=FALSE" do URL bazy danych)
+Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-214]
+2022-10-31 19:58:08.951  INFO 23280 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-10-31 19:58:08.952  INFO 23280 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
