@@ -31,7 +31,7 @@ public class QuizApiClient {
     private HttpRequestFactory httpRequestFactory;
     
     public List<QuestionResponseDto> getRandomQuestion() throws QuizApiQuestionNotFoundExcption, QuizApiRequestFailedException {
-        HttpRequest randomQuestion = httpRequestFactory.createHttpRequest(new CriteriaDto(null, null, 1));
+        HttpRequest randomQuestion = httpRequestFactory.createHttpRequest(new CriteriaDto());
         try {
             HttpResponse<String> response = httpClient.send(randomQuestion, HttpResponse.BodyHandlers.ofString());
 
@@ -55,7 +55,7 @@ public class QuizApiClient {
         }
     }
     public List<QuestionResponseDto> getQuestionByCriteria(String category, String difficulty, Integer limit ) {
-        HttpRequest questionsByParameter = httpRequestFactory.createHttpRequest(new CriteriaDto(category, difficulty, limit));
+        HttpRequest questionsByParameter = httpRequestFactory.createHttpRequest(new CriteriaDto(category, difficulty, limit, null));
 
         try {
             HttpResponse<String> response = httpClient.send(questionsByParameter, HttpResponse.BodyHandlers.ofString());

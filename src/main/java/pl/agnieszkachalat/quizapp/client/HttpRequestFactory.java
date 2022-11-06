@@ -17,8 +17,8 @@ public class HttpRequestFactory {
     @Autowired
     private PropertiesProvider propertiesProvider;
 
-    public HttpRequest createHttpRequest(CriteriaDto parameters){
-        URI uriWithParameters = createUriWithParameters(parameters);
+    public HttpRequest createHttpRequest(CriteriaDto criteria){
+        URI uriWithParameters = createUriWithParameters(criteria);
 
         return HttpRequest.newBuilder()
                 .uri(uriWithParameters)
@@ -30,16 +30,16 @@ public class HttpRequestFactory {
     }
 
 
-    private URI createUriWithParameters(CriteriaDto parameters) {
+    private URI createUriWithParameters(CriteriaDto criteria) {
         UriComponentsBuilder uriBuilder = UriComponentsBuilder.fromHttpUrl(propertiesProvider.getQuestionsEndpointUri());
-        if (parameters.getCategory() != null) {
-            uriBuilder.queryParam(CATEGORY.getName(), parameters.getCategory());
+        if (criteria.getCategory() != null) {
+            uriBuilder.queryParam(CATEGORY.getName(), criteria.getCategory());
         }
-        if (parameters.getDifficulty() != null) {
-            uriBuilder.queryParam(DIFFICULTY.getName(), parameters.getDifficulty());
+        if (criteria.getDifficulty() != null) {
+            uriBuilder.queryParam(DIFFICULTY.getName(), criteria.getDifficulty());
         }
-        if (parameters.getLimit()!= null) {
-            uriBuilder.queryParam(LIMIT.getName(), parameters.getLimit());
+        if (criteria.getLimit()!= null) {
+            uriBuilder.queryParam(LIMIT.getName(), criteria.getLimit());
         }
 
         return uriBuilder.build()
